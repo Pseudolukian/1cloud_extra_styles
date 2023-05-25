@@ -1,0 +1,39 @@
+/* Контейнер для карточек */
+.content_section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Стили для каждой карточки */
+.post_card_cont {
+  flex: 1 0 30%; /* здесь мы указываем flex-grow, flex-shrink и flex-basis. 30% - это минимальная ширина карточки */
+  margin: 10px; /* пространство вокруг каждой карточки */
+  box-sizing: border-box; /* чтобы padding и border не увеличивали размеры блока */
+}
+
+/* Контейнер для изображения карточки */
+.post_card_image_holder {
+  width: 100%;
+}
+
+.post_card_image_holder img {
+  width: 100%; /* ширина изображения равна ширине контейнера */
+  height: auto; /* чтобы сохранить пропорции изображения */
+}
+
+/* Контейнер для информации о карточке */
+.post_card_info {
+  padding: 10px; /* отступы внутри блока с информацией */
+}
+
+/* Заголовок карточки */
+.post_card_title {
+  font-size: 20px; /* размер шрифта заголовка */
+  margin-bottom: 10px; /* отступ снизу */
+}
+
+/* Описание карточки */
+.post_card_headline {
+  font-size: 16px; /* размер шрифта описания */
+}
