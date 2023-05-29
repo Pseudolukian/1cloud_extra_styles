@@ -1,43 +1,210 @@
-/* Контейнер для карточек */
+/* ==================Main style set up zone============= */
+
+:root {
+  --dark-blue: #0e0b2b;
+}
+
+p,ol,li,b,summary, blockquote {
+  font-size: 18px;
+}
+
+p {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+* img, center img {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+* code {
+  color: white;
+  background-color: black;
+  display: block;
+  word-wrap: break-word;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.inline_black { /* Inline code highlater */
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
+/* ==================Bottom card set up zone=============== */
+/* Bottom cards container */
 .content_section {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 
-/* Стили для каждой карточки */
+/* Cards style */
 .post_card_cont {
-  flex: 1 0 30%; /* здесь мы указываем flex-grow, flex-shrink и flex-basis. 30% - это минимальная ширина карточки */
-  margin: 10px; /* пространство вокруг каждой карточки */
-  box-sizing: border-box; /* чтобы padding и border не увеличивали размеры блока */
+  flex: 1 0 30%; 
+  margin: 10px; 
+  box-sizing: border-box; 
 }
 
-/* Контейнер для изображения карточки */
+/* Img container */
 .post_card_image_holder {
   width: 100%;
 }
 
 .post_card_image_holder img {
-  width: 100%; /* ширина изображения равна ширине контейнера */
-  height: auto; /* чтобы сохранить пропорции изображения */
+  width: 100%; /* С€РёСЂРёРЅР° РёР·РѕР±СЂР°Р¶РµРЅРёСЏ СЂР°РІРЅР° С€РёСЂРёРЅРµ РєРѕРЅС‚РµР№РЅРµСЂР° */
+  height: auto; /* С‡С‚РѕР±С‹ СЃРѕС…СЂР°РЅРёС‚СЊ РїСЂРѕРїРѕСЂС†РёРё РёР·РѕР±СЂР°Р¶РµРЅРёСЏ */
 }
 
-/* Контейнер для информации о карточке */
+/* Info container */
 .post_card_info {
-  padding: 0px; /* отступы внутри блока с информацией */
+  padding: 0px; /* РѕС‚СЃС‚СѓРїС‹ РІРЅСѓС‚СЂРё Р±Р»РѕРєР° СЃ РёРЅС„РѕСЂРјР°С†РёРµР№ */
 }
 
-/* Заголовок карточки */
+/* Card title */
 .post_card_title {
-  font-size: 20px; /* размер шрифта заголовка */
-  margin-bottom: 10px; /* отступ снизу */
+  font-size: 20px; 
+  margin-bottom: 10px; 
 }
 
-/* Описание карточки */
+/* Card info */
 .post_card_headline {
-  font-size: 16px; /* размер шрифта описания */
+  font-size: 16px; 
 }
 
 .post_cover {
-margin: 0px;
+  margin: 0px;
+}
+
+.blog__content img {
+  margin: 0px;
+}
+
+
+/*===========3 colomuns set up zone=============*/
+
+.common_links {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card_link {
+  flex: 1 0 30%; 
+  margin: 10px; 
+  box-sizing: border-box;
+}
+
+.card_link_img {
+  width: 100%;
+}
+
+.card_info {
+  font-size: 16px; 
+}
+
+.card_info h3 {
+  font-size: 22px; 
+}
+
+/*===============Integration===============*/
+.row_2_col, .history_block, .two_col_history_2 {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  
+}
+
+.back_dark_blue {
+  background-color: var(--dark-blue);
+  color: white;
+  border-radius: 15px;
+}
+
+.img_center_grid, .bio_block_left_column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.img_center_grid img.content_block_left_col_img {
+  width: 100%;
+  max-width: 130px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.help_block_right_column, .bio_block_right_column, .right_col_history_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+
+/*===========Biography integration===========*/
+
+.history_2 {
+  width: 100%;
+}
+
+.header_history_2 h3 {
+  text-align: center;
+}
+
+.two_col_history_2, .bio_block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.left_col_history_2, .bio_block_left_column {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.right_col_history_2, .bio_block_right_column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right_col_history_2 img.block_img_center_squared {
+  max-height: 300px;
+}
+
+.fullsize_history_2 {
+  margin-top: 20px;
+}
+
+/*======Blockquote====*/
+
+blockquote {
+  padding: 10px;
+  margin: 0 0 10px 0;
+  border-left: 5px solid #ccc;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  content: open-quote;
+}
+blockquote:after {
+  content: close-quote;
+}
+blockquote footer {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
 }
